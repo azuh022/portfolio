@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milena Szymanek</title>
-</head>
-<body>
-    
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Milena Szymanek</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #909090;
+                font-family: Arial, sans-serif;
+            }
+            
+            .image-container {
+                width: 85%;
+                margin: auto;
+                margin-bottom: 1.5%;
+                margin-top: 1.5%;
+                text-align: center;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            
+            html,
+            body {
+                height: 100%;
+            }
+            
+            body {
+                overflow: auto;
+            }
+            
+             ::-webkit-scrollbar {
+                width: 12px;
+            }
+            
+             ::-webkit-scrollbar-thumb {
+                background-color: rgb(223, 180, 71);
+                border-radius: 6px;
+            }
+            
+             ::-webkit-scrollbar-track {
+                background-color: #909090;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="imageContainer"></div>
+
+        <script>
+            function displayPNGImages() {
+                const imageContainer = document.getElementById("imageContainer");
+                for (let i = 1; i <= 5; i++) {
+                    const imageName = i + ".png";
+                    const imagePath = imageName;
+                    const img = document.createElement("img");
+                    img.src = imagePath;
+                    imageContainer.appendChild(img);
+                }
+            }
+            displayPNGImages();
+        </script>
+    </body>
+
+    </html>
